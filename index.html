@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somali Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <h1 class="logo">Somali Restaurant</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#add-menu-item">Add Menu Item</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div id="menu-container" class="menu-container">
+            <!-- Menu items will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Add Menu Item Section -->
+    <section id="add-menu-item" class="add-menu-item-section">
+        <h2>Add New Menu Item</h2>
+        <form id="addMenuItemForm" class="add-menu-item-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" id="price" name="price" required>
+
+            <label for="available">Available:</label>
+            <select id="available" name="available" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+
+            <label for="file">Choose Image:</label>
+            <input type="file" id="file" name="file" accept="image/*" required>
+
+            <button type="submit">Add Menu Item</button>
+        </form>
+        <div id="addMenuItemMessage"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Somali Restaurant. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
